@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>colorme</title>
+    <script src="libs/p5.min.js"></script>
+    <script src="libs/p5.dom.min.js"></script>
+    <script src="libs/jquery-3.2.1.min.js"></script>
+    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header>
+    <h1>colorme.</h1>
+</header>
+<div id="image-panel">
+    <div id="image-canvas">
 
+    </div>
+</div>
+<div id="toolbar">
+    <div id="clear-button" class="tool-button">
+        <img width="100%" height="100%" src="res/clear.svg"/>
+    </div>
+    <div id="download-button" class="tool-button">
+        <img width="100%" height="100%" src="res/download.svg"/>
+    </div>
+    <div id="lines-button" class="tool-button">
+        <h1>L</h1>
+    </div>
+    <div id="lines-label" class="tool-label"><h1>lines</h1></div>
+    <div id="lines-panel" class="tool-panel">
+        <h4>amount:</h4>
+        <input id="lines-amount-range" type="range" min="1" max="10">
+        <h5 id="lines-amount-count">6</h5>
+        <div id="lines-execute" class="tool-execute">Execute</div>
+    </div>
+</div>
+<div id="kernel-panel">
+
+    <div id="kernel-header">
+        <h1>kernel</h1>
+        <div id="info-button" onclick="">
+            i
+        </div>
+    </div>
+
+    <div id="info-panel">
+        Draw on the kernel image to change the final drawing.<br>
+        Drawing in red will not be included.<br>
+        Click on letters in the toolbar to open tools.<br>
+        Click the i to close this message.
+    </div>
+    <div id="kernel-canvas">
+
+    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    overflow: hidden;
+}
+
+header{
+    height:100px;
+    background-color: rgb(30,30,30);
+    color: rgb(255, 255, 255);
+
+    position: relative;
+}
+
+header h1{
+    font-size: 50px;
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+}
+
+#kernel-panel{
+    background-color: rgb(230,230,230);
+    display: inline-block;
+    float: right;
+    width: 30%;
+    margin: 0;
+
+}
+
+#kernel-header{
+    height:50px;
+    background-color: rgb(70,70,70);
+    position: relative;
+}
+
+#kernel-header h1{
+    margin: 0;
+    color: rgb(255,255,255);
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+}
+
+#info-button{
+    float:right;
+    color:rgb(70,70,70);
+    background-color: rgb(130,130,130);
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+
+#kernel-canvas{
+    background-color: rgb(255,255,255);
+    margin: auto;
+}
+
+#image-panel{
+    display: inline-block;
+    width:70%
+}
+
+#image-canvas{
+    background-color: rgb(70,70,70);
+    margin:auto;
+}
+
+#info-panel{
+    padding: 5px;
+    background-color: rgb(130,130,130);
+    display: none;
+}
+#toolbar{
+    background-color: rgb(130,130,130);
+    width: 50px;
+    height:100%;
+    position: absolute;
+    top: 100px;
+    right:30%;
+    color:rgb(255,255,255);
+}
+
+.tool-button{
+    width: 40px;
+    height:40px;
+    padding: 5px;
+}
+
+.tool-button h1{
+    margin:0;
+    text-align: center;
+}
+
+.tool-label{
+    position:absolute;
+    left:50px;
+    height:40px;
+    padding:5px;
+    width: 190px;
+    background-color: rgb(70,70,70);
+    display: none;
+}
+
+h1{margin: 0}
+h4{margin: 0}
+h5{margin: 0;
+display: inline-block;
+width: 40px}
+
+#lines-label{
+    top:100px;
+}
+
+input{
+    display: inline-block;
+    height:21px;
+}
+
+.tool-panel{
+    background-color: rgb(30,30,30);
+    position: absolute;
+    width:190px;
+    left:50px;
+    padding: 5px;
+    display: none;
+}
+
+.tool-panel-table td{
+    height:21px;
+}
+
+#lines-amount-range{
+    margin: 0;
+}
+
+#lines-amount-count{
+    width: 20px;
+}
+
+.tool-execute{
+    width:185px;
+    background-color: rgb(70,70,70);
+    padding-left: 5px;
+}
