@@ -42,10 +42,10 @@ $(function () {
     linesButton.click(function () {
         if(toolOpen==1){
             toolOpen =0;
-            $("#lines-panel").hide();
+            $("#lines-panel").hide(100);
         } else{
             toolOpen =1;
-            $("#lines-panel").show();
+            $("#lines-panel").show(100);
         }
 
     });
@@ -62,6 +62,39 @@ $(function () {
         }
     })
 
+    var circlesButton = $("#circles-button");
+    circlesButton.hover(function () {
+        $("#circles-label").show(100);
+    },function () {
+        if(toolOpen!=2) {
+            $("#circles-label").hide(100);
+        }
+    });
+    circlesButton.click(function () {
+        if(toolOpen==2){
+            toolOpen =0;
+            $("#circles-panel").hide(100);
+        } else{
+            toolOpen =2;
+            $("#circles-panel").show(100);
+        }
+
+    });
+    $("#circles-amount-range").on("input",function () {
+        $("#circles-amount-count").html($(this).val());
+    });
+    $("#circles-execute").click(function () {
+        for(var i=0;i< $("#circles-amount-range").val();i++){
+            var x = Math.random()*kernelWidth;
+            var y = Math.random()*kernelHeight;
+            var r = Math.random()*kernelWidth/3;
+            pseudoKernel.noFill();
+            pseudoKernel.ellipse(x,y,r,r);
+            var scale = (imageWidth/4)/kernelHeight;
+            kernel.noFill();
+            kernel.ellipse(x*scale,y*scale,r*scale,r*scale);
+        }
+    })
 });
 
 

@@ -115,6 +115,10 @@ width: 40px}
     top:100px;
 }
 
+#circles-label{
+    top:150px;
+}
+
 input{
     display: inline-block;
     height:21px;
